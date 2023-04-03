@@ -1,3 +1,8 @@
+# -=-=-=--=-=-=-=-=-=-=-=-=--=-
+# MIT License
+# Originaly written by Ira Bell
+# -=-=-=--=-=-=-=-=-=-=-=-=--=-
+
 from astropy.io import fits
 
 # Open the FITS file
