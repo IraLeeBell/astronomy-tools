@@ -46,7 +46,7 @@ for key in header:
 # doesn't print... 
 
 print(f'The right ascension of this object is: {ra}')
-print(f'The declenation of this object is: {dec}')
+print(f'The declination of this object is: {dec}')
 
 # Close the FITS file
 hdul.close()
