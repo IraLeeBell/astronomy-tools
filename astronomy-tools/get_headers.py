@@ -3,7 +3,6 @@ from astropy.io import fits
 # Open the FITS file
 hdul = fits.open('hlsp_jwst-ero_jwst_miri_stephansquintet_f1000w_v1_i2d.fits')
 
-
 # Get the header of the primary HDU
 header = hdul[0].header
 
@@ -32,7 +31,22 @@ for key in header:
             else:
                 raise e
 
+# Print the values of the variables
+for key in header:
+    var_name = key.lower().replace('-', '_')
+    try:
+        value = eval(var_name)
+        print(f"{var_name} = {value}")
+    except NameError:
+        pass
 
+
+# Use the variables in a sentence
+# Need to modify this to make sure something exists or it
+# doesn't print... 
+
+print(f'The right ascension of this object is: {ra}')
+print(f'The declenation of this object is: {dec}')
 
 # Close the FITS file
 hdul.close()
